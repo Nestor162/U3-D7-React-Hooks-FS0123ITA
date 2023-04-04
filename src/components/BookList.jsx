@@ -34,11 +34,13 @@ const BookList = props => {
               ))}
           </Row>
         </Col>
-        <Col md={6}>
+        <Col md={6} className="position-sticky h-100" style={{ top: "10px" }}>
           {selectedBook ? (
             <CommentArea asin={selectedBook} />
           ) : (
-            <Alert variant="info">Seleziona un libro per visualizzare i commenti</Alert>
+            <Alert variant="info" className="position-absolute">
+              Seleziona un libro per visualizzare i commenti
+            </Alert>
           )}
         </Col>
       </Row>
